@@ -11,8 +11,6 @@ services:
       replicas: 10
 
   producer:
-    depends_on:
-      - consumer
     env_file: .env
     build:
       context: ./

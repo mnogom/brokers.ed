@@ -1,0 +1,24 @@
+services:
+  consumer:
+    env_file: .env
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        - BUILD_SOURCE=./consumer
+    deploy:
+      mode: replicated
+      replicas: 10
+
+  producer:
+    depends_on:
+      - consumer
+    env_file: .env
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        - BUILD_SOURCE=./producer
+    deploy:
+      mode: replicated
+      replicas: 1

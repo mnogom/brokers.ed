@@ -19,7 +19,7 @@ ARG DIST_PATH
 ARG BUILD_SOURCE
 
 LABEL maintainer="Konstantin Freidlin"
-LABEL description="ZMQ Push/Pull :: Build"
+LABEL description="ZMQ Push/Pull 1/Many :: Build"
 LABEL version="0.1.0"
 
 WORKDIR $PROJECT_PATH
@@ -42,7 +42,7 @@ CMD [ "/bin/sh" ]
 FROM $IMAGE_NAME:$IMAGE_VERSION
 
 LABEL maintainer="Konstantin Freidlin"
-LABEL description="ZMQ Push/Pull"
+LABEL description="ZMQ Push/Pull 1/Many"
 LABEL version="0.1.0"
 
 ARG DIST_PATH

@@ -1,6 +1,6 @@
 # ZMQ Push/Pull
 
-In this case we start 10 producers and 1 producer in one network. They will make connection with ZMQ
+In this case we start 1 producer and 10 consumers in one network. They will make connection with ZMQ
 over TCP protocol on port `5556` (setup in .env)
 
 # Usage

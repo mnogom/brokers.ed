@@ -1,6 +1,6 @@
 # ZMQ Req/Rep
 
-In this case we start 1 consumer and 10 producer in one network. They will make connection with ZMQ
+In this case we start 10 producer and 1 consumer in one network. They will make connection with ZMQ
 over TCP protocol on port `5556` (setup in .env)
 
 # Usage

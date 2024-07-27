@@ -54,7 +54,7 @@ async def run(
     with open_socket(host=host, port=port, protocol=protocol) as socket:
         for message_id in range(package_number):
             await request(socket=socket, session_id=session_id, message_id=message_id)
-        await asyncio.sleep(timeout)
+            await asyncio.sleep(timeout)
 
 
 def main() -> None:

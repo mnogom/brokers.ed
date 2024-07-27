@@ -45,7 +45,7 @@ async def run(
     session_id: bytes,
 ) -> None:
     with open_socket(port=port, protocol=protocol) as socket:
-        await asyncio.sleep(0.1)  # Wait for the socket to be ready
+        await asyncio.sleep(0.5)  # Wait for the socket to be ready
         for message_id in range(package_number):
             await publish(socket=socket, session_id=session_id, message_id=message_id)
             await asyncio.sleep(timeout)
